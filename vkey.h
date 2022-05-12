@@ -1,0 +1,50 @@
+#ifndef __VKEY_H_
+#define __VKEY_H_
+
+typedef enum 
+{
+    KEYCODE_ESC,
+    KEYCODE_CHAR,
+    KEYCODE_BACKSPACE,
+    KEYCODE_RETURN,
+    KEYCODE_END_OF_LINE,
+    KEYCODE_BEGIN_OF_LINE,
+    KEYCODE_CANCEL_TEXT,
+    KEYCODE_ARROW_UP,
+    KEYCODE_ARROW_DOWN,
+    KEYCODE_ARROW_LEFT,
+    KEYCODE_ARROW_RIGHT,
+    KEYCODE_PAGE_UP,
+    KEYCODE_PAGE_DOWN,
+    KEYCODE_INSERT,
+    KEYCODE_DELETE,
+    KEYCODE_TAB,
+    KEYCODE_CLEAR_LINE,
+    KEYCODE_CLEAR_EOL,
+    KEYCODE_CTRL_LEFT,
+    KEYCODE_CTRL_RIGHT,
+    KEYCODE_F1,
+    KEYCODE_F2,
+    KEYCODE_F3,
+    KEYCODE_F4,
+    KEYCODE_F5,
+    KEYCODE_F6,
+    KEYCODE_F7,
+    KEYCODE_F8,
+    KEYCODE_F9,
+    KEYCODE_F10,
+    KEYCODE_F11,
+    KEYCODE_F12,
+
+    KEYCODE_UNKNOWN,
+}KeyCode_e;
+
+typedef struct VKey_s
+{
+    KeyCode_e    mCode;    
+    char        mValue;
+}VKey_t;
+
+int ReadVKey(int nFd, VKey_t* pVKey);
+
+#endif /* __VKEY_H_ */
